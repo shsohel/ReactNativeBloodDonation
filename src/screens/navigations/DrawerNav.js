@@ -17,18 +17,14 @@ const DrawerNav = ( props ) => {
                         <Avatar.Image source={{ uri: 'https://picsum.photos/id/1/200/300' }} />
                     </View>
                     <View style={styles.userInfo}>
-                        <Title style={styles.title}>Admin</Title>
-                        <Caption style={styles.caption}>@prosohel</Caption>
+                        <Title style={styles.fullName}>SH SOHEL</Title>
+                        <Caption style={styles.userName}>@prosohel</Caption>
                     </View>
                 </View>
                 <View style={styles.userInfoSection}>
                     <View style={styles.section}>
-                        <Paragraph style={styles.paragraph}>80</Paragraph>
-                        <Caption style={styles.caption}>Follower</Caption>
-                    </View>
-                    <View style={styles.section}>
-                        <Paragraph style={styles.paragraph}>20</Paragraph>
-                        <Caption style={styles.caption}>Following</Caption>
+                        <Paragraph style={styles.donateTitle}>Last Blood Donate : </Paragraph>
+                        <Caption style={styles.lastDonateDate}>March 31, 2022</Caption>
                     </View>
 
                 </View>
@@ -61,12 +57,12 @@ export default DrawerNav
 const styles = StyleSheet.create( {
     drawerMain: {
         flex: 1,
-        padding: 15,
+        //  padding: 15,
 
     },
     drawerContent: {
         flex: 1,
-        backgroundColor: '#DEDEDE',
+        backgroundColor: '#8a0303',
 
         justifyContent: 'center',
         alignItems: 'center'
@@ -80,20 +76,42 @@ const styles = StyleSheet.create( {
     userInfo: {
         flex: 1,
         marginTop: 15,
-        backgroundColor: '#FBBC06',
+        backgroundColor: '#FEB139',
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    fullName: {
+        fontFamily: 'Roboto',
+        fontWeight: 'bold',
+        color: '#143F6B'
+    },
+    userName: {
+        fontFamily: 'Roboto',
+        fontStyle: 'italic',
+        fontWeight: '400',
+        color: '#143F6B',
+    },
+    donateTitle: {
+        fontFamily: 'Roboto',
+    },
+    lastDonateDate: {
+        fontFamily: 'Roboto',
+        fontStyle: 'italic',
+        color: '#8a0303',
+        fontWeight: 'bold',
+
     },
     paragraph: {
         marginRight: 6
     },
     title: {
-
+        color: '#8a0303',
     },
     caption: {
         fontFamily: 'Roboto',
-        fontStyle: 'italic'
+        fontStyle: 'italic',
+        color: 'white',
     },
     row: {
 
@@ -102,7 +120,7 @@ const styles = StyleSheet.create( {
         flex: 1,
         justifyContent: 'flex-start',
         flexDirection: 'row',
-        backgroundColor: '#F8CFDD',
+        backgroundColor: '#F6F54D',
         paddingRight: 6,
         paddingLeft: 6
     },
@@ -114,6 +132,11 @@ const styles = StyleSheet.create( {
     navSection: {
     },
     navItem: {
+        label: {
+            padding: 0,
+            margin: 0,
+            backgroundColor: 'red'
+        }
 
     },
     preference: {
